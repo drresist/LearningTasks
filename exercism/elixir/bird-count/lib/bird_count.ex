@@ -1,6 +1,7 @@
 defmodule BirdCount do
-  def today(list) do
-    List.first(list)
+  def today(_=[]) do nil end
+  def today([head|_tail]) do
+    head
   end
 
   def increment_day_count([head | tail]) do
